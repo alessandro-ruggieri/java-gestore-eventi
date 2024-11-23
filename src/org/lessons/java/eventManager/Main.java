@@ -70,7 +70,7 @@ public class Main {
                 while (!inputValido) {
                     System.out.print("Quante disdette vuoi effettuare? ");
                     int disdette = scanner.nextInt();
-                    scanner.nextLine(); // VERIFICARE Necessario per evitare l'input vuoto al prossimo scanner.nextLine
+                    scanner.nextLine(); // Necessario per evitare l'input vuoto al prossimo scanner.nextLine
 
                     if (disdette == 0) {
                         System.out.println("Nessuna disdetta effettuata.");

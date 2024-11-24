@@ -9,7 +9,7 @@ public class Evento {
 	private int postiTotali;
 	private int postiPrenotati;
 	
-	
+	//Costruttore con controlli
 	Evento(String titolo, LocalDate data, int postiTotali) {
 		this.postiPrenotati = 0;
 		
@@ -32,7 +32,9 @@ public class Evento {
 			this.postiTotali = postiTotali;
 		}
 	}
-
+	
+	//Getters e Setters
+	
 	public String getTitolo() {
 		return titolo;
 	}
@@ -65,6 +67,7 @@ public class Evento {
 		return postiPrenotati;
 	}
 	
+	//Metodo per aggiungere prenotazioni
 	public void prenota() {
 		  if (data.isBefore(LocalDate.now())) {
 	            System.out.println("Non puoi prenotare un evento già passato.");
@@ -76,6 +79,7 @@ public class Evento {
 	        }
 	}
 	
+	//Metodo per effettuare le disdette
 	public void disdici() {
 		if (data.isBefore(LocalDate.now())) {
             System.out.println("Non puoi disdire un evento già passato.");
@@ -87,6 +91,7 @@ public class Evento {
         }
 	}
 	
+	//Override del metodo toString per mostrare Data formattata e titolo dell'evento
 	@Override
 	public String toString() {
 		DateTimeFormatter formattaData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
